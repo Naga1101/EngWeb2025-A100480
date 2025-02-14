@@ -13,18 +13,20 @@ router.get('/', async (req, res) => {
             .sort((a, b) => a.codigo.localeCompare(b.codigo))
             .map(intervencao => `
                 <li>
-                    Code: ${intervencao.codigo}, Name: ${intervencao.nome}, 
-                    Description: ${intervencao.descricao}
+                    <a href="/intervencao/${intervencao.codigo}" class="intervencao-link">
+                        ${intervencao.codigo} ${intervencao.nome}
+                    </a>
                 </li>
             `).join('');
 
         res.send(`
             <html>
-                <head><title>Listagem dos Tipos de Intervenção</title></head>
+                <head><title>Tipos de Intervenção</title></head>
                 <body>
+                    <a href="/">Voltar para o menu inicial</a>
                     <h1>Listagem dos Tipos de Intervenção</h1>
                     <ul>${interventionsList}</ul>
-                    <a href="/">Back to main page</a>
+                    <a href="/">Voltar para o menu inicial</a>
                 </body>
             </html>
         `);

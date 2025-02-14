@@ -27,11 +27,13 @@ router.get('/', async (req, res) => {
 
         res.send(`
             <html>
+                <a href="/">Voltar para o menu inicial</a>
                 <head><title>Listagem das Marcas e Modelos</title></head>
                 <body>
+                    <a href="/">Back to main page</a>
                     <h1>Listagem das Marcas e Modelos dos Carros</h1>
                     <ul>${carsList}</ul>
-                    <a href="/">Back to main page</a>
+                    <a href="/">Voltar para o menu inicial</a>
                 </body>
             </html>
         `);

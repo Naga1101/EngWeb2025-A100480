@@ -12,18 +12,19 @@ router.get('/', async (req, res) => {
         const repairsList = reparacoes.map(reparacao => `
             <li>
                 Date: ${reparacao.data}, NIF: ${reparacao.nif}, Name: ${reparacao.nome}, 
-                Car: ${reparacao.viatura.marca} ${reparacao.viatura.modelo}, 
+                Car: ${reparacao.viatura}, 
                 Interventions: ${reparacao.nr_intervencoes}
             </li>
         `).join('');
 
         res.send(`
             <html>
-                <head><title>Listagem das Reparações</title></head>
+                <head><title>Lista das Reparações</title></head>
                 <body>
+                    <a href="/">Voltar para o menu inicial</a>
                     <h1>Listagem das Reparações</h1>
                     <ul>${repairsList}</ul>
-                    <a href="/">Back to main page</a>
+                    <a href="/">Voltar para o menu inicial</a>
                 </body>
             </html>
         `);
