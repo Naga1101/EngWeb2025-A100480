@@ -3,7 +3,6 @@ const axios = require('axios');
 const router = express.Router();
 const JSON_SERVER_URL = 'http://localhost:5000';
 
-// Intervention list route
 router.get('/', async (req, res) => {
     try {
         const response = await axios.get(`${JSON_SERVER_URL}/intervencoes`);

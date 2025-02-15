@@ -1,4 +1,5 @@
 import json
+from collections import OrderedDict
 
 def normalize_json(path, output_path):
     with open(path, "r", encoding="utf-8") as f:
@@ -42,7 +43,17 @@ def normalize_json(path, output_path):
             "intervencoes": intervencao_refs 
         })
 
+    reparacoes.sort(key=lambda r: r['data'])
+
+    for idx, reparacao in enumerate(reparacoes, 1):
+        reparacao_with_id_first = OrderedDict()
+        reparacao_with_id_first["id"] = idx
+        reparacao_with_id_first.update(reparacao)
+        reparacoes[idx-1] = reparacao_with_id_first
+
+
     viaturas_sorted = sorted(viaturas.values(), key=lambda v: v['marca'])
+    
     intervencoes_sorted = sorted(intervencoes.values(), key=lambda i: i['codigo'])
     
     normalized_data = {
@@ -53,8 +64,6 @@ def normalize_json(path, output_path):
 
     with open(output_path, "w", encoding="utf-8") as output_file:
         json.dump(normalized_data, output_file, ensure_ascii=False, indent=4)
-
-
 
 def main():
     normalize_json("dataset_reparacoes.json", "normalized_dataset.json")

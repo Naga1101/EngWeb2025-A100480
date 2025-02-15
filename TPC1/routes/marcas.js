@@ -3,28 +3,26 @@ const axios = require('axios');
 const router = express.Router();
 const JSON_SERVER_URL = 'http://localhost:5000';
 
+// Route to list all marcas
 router.get('/', async (req, res) => {
     try {
         const response = await axios.get(`${JSON_SERVER_URL}/viaturas`);
         const viaturas = response.data;
 
-        const viaturasList = viaturas.map(viatura => `
-            <li>
-                <strong>${viatura.marca} ${viatura.modelo}</strong>
-                <a href="/viatura/${viatura.matricula}" class="viatura-link">
-                    (${viatura.matricula})
-                </a>
-            </li>
-        `).join('');
+        const marcas = [...new Set(viaturas.map(viatura => viatura.marca))];
 
         res.send(`
             <html>
-                <head><title>Lista de Viaturas</title></head>
+                <head><title>Lista de Marcas</title></head>
                 <body>
-                <a href="/">Voltar para o menu inicial</a>
-                    <h1>Lista de Viaturas</h1>
+                    <a href="/">Voltar para o menu inicial</a>
+                    <h1>Lista de Marcas</h1>
                     <ul>
-                        ${viaturasList}
+                        ${marcas.map(marca => `
+                            <li>
+                                <a href="/marca/${marca}" class="marca-link">${marca}</a>
+                            </li>
+                        `).join('')}
                     </ul>
                     <a href="/">Voltar para o menu inicial</a>
                 </body>
@@ -32,7 +30,7 @@ router.get('/', async (req, res) => {
         `);
     } catch (error) {
         console.error(error);
-        res.status(500).send('Error fetching cars');
+        res.status(500).send('Error fetching marcas');
     }
 });
 
