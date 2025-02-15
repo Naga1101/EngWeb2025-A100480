@@ -11,7 +11,7 @@
 
 Construir um serviço em nodejs, que consuma a API de dados servida pelo json-server da oficina de reparações e responda com as páginas web do site.
 
-### Como correr
+## Como correr
 
 Ao executar o comando seguinte irá iniciar o json-server ao mesmo tempo que será iniciado o servidor. 
 
