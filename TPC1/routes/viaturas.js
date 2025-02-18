@@ -1,9 +1,7 @@
-const express = require('express');
 const axios = require('axios');
-const router = express.Router();
 const JSON_SERVER_URL = 'http://localhost:5000';
 
-router.get('/', async (req, res) => {
+module.exports = async (req, res) => {
     try {
         const response = await axios.get(`${JSON_SERVER_URL}/viaturas`);
         const viaturas = response.data;
@@ -11,29 +9,28 @@ router.get('/', async (req, res) => {
         const viaturasList = viaturas.map(viatura => `
             <li>
                 <strong>${viatura.marca} ${viatura.modelo}</strong>
-                <a href="/viatura/${viatura.matricula}" class="viatura-link">
-                    (${viatura.matricula})
-                </a>
+                <a href="/viatura/${viatura.matricula}" class="viatura-link">(${viatura.matricula})</a>
             </li>
         `).join('');
 
-        res.send(`
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.end(`
             <html>
-                <head><title>Lista de Viaturas</title></head>
+                <head>
+                    <meta charset="UTF-8"> 
+                    <title>Lista de Viaturas</title>
+                </head>
                 <body>
-                <a href="/">Voltar para o menu inicial</a>
+                    <a href="/">Voltar para o menu inicial</a>
                     <h1>Lista de Viaturas</h1>
-                    <ul>
-                        ${viaturasList}
-                    </ul>
+                    <ul>${viaturasList}</ul>
                     <a href="/">Voltar para o menu inicial</a>
                 </body>
             </html>
         `);
     } catch (error) {
-        console.error(error);
-        res.status(500).send('Error fetching cars');
+        console.error('Error fetching viaturas:', error);
+        res.writeHead(500, { 'Content-Type': 'text/html' });
+        res.end('<h1>Erro ao buscar viaturas</h1>');
     }
-});
-
-module.exports = router;
+};

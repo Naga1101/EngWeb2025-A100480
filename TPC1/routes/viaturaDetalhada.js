@@ -1,16 +1,16 @@
-const express = require('express');
 const axios = require('axios');
-const router = express.Router();
 const JSON_SERVER_URL = 'http://localhost:5000';
 
-router.get('/:matricula', async (req, res) => {
-    const { matricula } = req.params; 
+module.exports = async (req, res) => {
+    const matricula = req.url.split('/')[2];
     try {
         const responseViatura = await axios.get(`${JSON_SERVER_URL}/viaturas?matricula=${matricula}`);
-        const viatura = responseViatura.data[0]; 
+        const viatura = responseViatura.data[0];
 
         if (!viatura) {
-            return res.status(404).send('Viatura not found');
+            res.writeHead(404, { 'Content-Type': 'text/html' });
+            res.end('<h1>Viatura não encontrada</h1>');
+            return;
         }
 
         const responseReparacoes = await axios.get(`${JSON_SERVER_URL}/reparacoes?viatura=${matricula}`);
@@ -22,15 +22,16 @@ router.get('/:matricula', async (req, res) => {
             </li>
         `).join('');
 
-        res.send(`
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.end(`
             <html>
-                <head><title>Viatura ${viatura.matricula}</title></head>
+                <head><meta charset="UTF-8"><title>Viatura ${viatura.matricula}</title></head>
                 <body>
-                    <a href="/viaturas">Voltar para a lista das viaturas</a>
+                    <a href="/viaturas">Voltar para a lista de viaturas</a>
                     <h2>Dono: ${reparacoes.length > 0 ? reparacoes[0].nome : 'Desconhecido'}</h2>
                     <p><strong>Marca:</strong> ${viatura.marca}</p>
                     <p><strong>Modelo:</strong> ${viatura.modelo}</p>
-                    <p>Matricula ${viatura.matricula}</p>
+                    <p><strong>Matricula:</strong> ${viatura.matricula}</p>
                     <h3>Reparações realizadas:</h3>
                     <ul>
                         ${reparacoesList}
@@ -40,9 +41,8 @@ router.get('/:matricula', async (req, res) => {
             </html>
         `);
     } catch (error) {
-        console.error(error);
-        res.status(500).send('Error fetching viatura details');
+        console.error('Error fetching viatura details:', error);
+        res.writeHead(500, { 'Content-Type': 'text/html' });
+        res.end('<h1>Erro ao buscar detalhes da viatura</h1>');
     }
-});
-
-module.exports = router;
+};

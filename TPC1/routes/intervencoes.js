@@ -1,9 +1,7 @@
-const express = require('express');
 const axios = require('axios');
-const router = express.Router();
 const JSON_SERVER_URL = 'http://localhost:5000';
 
-router.get('/', async (req, res) => {
+module.exports = async (req, res) => {
     try {
         const response = await axios.get(`${JSON_SERVER_URL}/intervencoes`);
         const intervencoes = response.data;
@@ -18,9 +16,10 @@ router.get('/', async (req, res) => {
                 </li>
             `).join('');
 
-        res.send(`
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.end(`
             <html>
-                <head><title>Tipos de Intervenção</title></head>
+                <head><meta charset="UTF-8"><title>Tipos de Intervenção</title></head>
                 <body>
                     <a href="/">Voltar para o menu inicial</a>
                     <h1>Listagem dos Tipos de Intervenção</h1>
@@ -31,8 +30,7 @@ router.get('/', async (req, res) => {
         `);
     } catch (error) {
         console.error(error);
-        res.status(500).send('Error fetching interventions');
+        res.writeHead(500, { 'Content-Type': 'text/html' });
+        res.end('Erro ao buscar as intervenções');
     }
-});
-
-module.exports = router;
+};

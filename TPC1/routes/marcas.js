@@ -1,18 +1,16 @@
-const express = require('express');
 const axios = require('axios');
-const router = express.Router();
 const JSON_SERVER_URL = 'http://localhost:5000';
 
-router.get('/', async (req, res) => {
+module.exports = async (req, res) => {
     try {
         const response = await axios.get(`${JSON_SERVER_URL}/viaturas`);
         const viaturas = response.data;
-
         const marcas = [...new Set(viaturas.map(viatura => viatura.marca))];
 
-        res.send(`
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.end(`
             <html>
-                <head><title>Lista de Marcas</title></head>
+                <head><meta charset="UTF-8"><title>Lista de Marcas</title></head>
                 <body>
                     <a href="/">Voltar para o menu inicial</a>
                     <h1>Lista de Marcas</h1>
@@ -29,8 +27,7 @@ router.get('/', async (req, res) => {
         `);
     } catch (error) {
         console.error(error);
-        res.status(500).send('Error fetching marcas');
+        res.writeHead(500, { 'Content-Type': 'text/html' });
+        res.end('<h1>Erro ao buscar marcas</h1>');
     }
-});
-
-module.exports = router;
+};
