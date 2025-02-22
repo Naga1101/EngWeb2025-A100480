@@ -2904,7 +2904,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I1",
-                "#text": "Clarinete"
+                "text": "Clarinete"
             },
             "alunos": [
                 "A33822",
@@ -2926,7 +2926,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I1",
-                "#text": "Clarinete"
+                "text": "Clarinete"
             },
             "alunos": []
         },
@@ -2936,7 +2936,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I2",
-                "#text": "Contrabaixo"
+                "text": "Contrabaixo"
             },
             "alunos": [
                 "A35278",
@@ -2959,7 +2959,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I2",
-                "#text": "Contrabaixo"
+                "text": "Contrabaixo"
             },
             "alunos": []
         },
@@ -2969,7 +2969,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I3",
-                "#text": "Corne Inglês"
+                "text": "Corne Inglês"
             },
             "alunos": [
                 "A38143",
@@ -2990,7 +2990,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I3",
-                "#text": "Corne Inglês"
+                "text": "Corne Inglês"
             },
             "alunos": []
         },
@@ -3000,7 +3000,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I4",
-                "#text": "Eufónio"
+                "text": "Eufónio"
             },
             "alunos": [
                 "A38169",
@@ -3022,7 +3022,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I4",
-                "#text": "Eufónio"
+                "text": "Eufónio"
             },
             "alunos": []
         },
@@ -3032,7 +3032,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I5",
-                "#text": "Fagote"
+                "text": "Fagote"
             },
             "alunos": [
                 "A38165",
@@ -3056,7 +3056,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I5",
-                "#text": "Fagote"
+                "text": "Fagote"
             },
             "alunos": []
         },
@@ -3066,7 +3066,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I6",
-                "#text": "Flauta"
+                "text": "Flauta"
             },
             "alunos": [
                 "A38156",
@@ -3086,7 +3086,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I6",
-                "#text": "Flauta"
+                "text": "Flauta"
             },
             "alunos": []
         },
@@ -3096,7 +3096,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I7",
-                "#text": "Fliscorne"
+                "text": "Fliscorne"
             },
             "alunos": [
                 "A33141",
@@ -3115,7 +3115,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I7",
-                "#text": "Fliscorne"
+                "text": "Fliscorne"
             },
             "alunos": []
         },
@@ -3125,7 +3125,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I8",
-                "#text": "Guitarra"
+                "text": "Guitarra"
             },
             "alunos": [
                 "A1510",
@@ -3147,7 +3147,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I8",
-                "#text": "Guitarra"
+                "text": "Guitarra"
             },
             "alunos": []
         },
@@ -3157,7 +3157,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I9",
-                "#text": "Harpa"
+                "text": "Harpa"
             },
             "alunos": [
                 "A38214",
@@ -3182,7 +3182,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I9",
-                "#text": "Harpa"
+                "text": "Harpa"
             },
             "alunos": []
         },
@@ -3192,7 +3192,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I10",
-                "#text": "Oboé"
+                "text": "Oboé"
             },
             "alunos": [
                 "A35272",
@@ -3211,7 +3211,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I10",
-                "#text": "Oboé"
+                "text": "Oboé"
             },
             "alunos": []
         },
@@ -3221,7 +3221,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I11",
-                "#text": "Orgão"
+                "text": "Orgão"
             },
             "alunos": [
                 "A18141",
@@ -3240,7 +3240,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I11",
-                "#text": "Orgão"
+                "text": "Orgão"
             },
             "alunos": []
         },
@@ -3250,7 +3250,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I12",
-                "#text": "Percussão"
+                "text": "Percussão"
             },
             "alunos": [
                 "A38224",
@@ -3266,7 +3266,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I12",
-                "#text": "Percussão"
+                "text": "Percussão"
             },
             "alunos": []
         },
@@ -3276,7 +3276,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I13",
-                "#text": "Piano"
+                "text": "Piano"
             },
             "alunos": [
                 "A35283",
@@ -3293,7 +3293,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I13",
-                "#text": "Piano"
+                "text": "Piano"
             },
             "alunos": []
         },
@@ -3303,7 +3303,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I14",
-                "#text": "Saxofone"
+                "text": "Saxofone"
             },
             "alunos": [
                 "A38196",
@@ -3321,7 +3321,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I14",
-                "#text": "Saxofone"
+                "text": "Saxofone"
             },
             "alunos": []
         },
@@ -3331,7 +3331,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I15",
-                "#text": "Trombone"
+                "text": "Trombone"
             },
             "alunos": [
                 "A33148",
@@ -3351,7 +3351,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I15",
-                "#text": "Trombone"
+                "text": "Trombone"
             },
             "alunos": []
         },
@@ -3361,7 +3361,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I16",
-                "#text": "Trompa"
+                "text": "Trompa"
             },
             "alunos": [
                 "A38215",
@@ -3382,7 +3382,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I16",
-                "#text": "Trompa"
+                "text": "Trompa"
             },
             "alunos": []
         },
@@ -3392,7 +3392,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I17",
-                "#text": "Trompete"
+                "text": "Trompete"
             },
             "alunos": [
                 "A38193",
@@ -3410,7 +3410,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I17",
-                "#text": "Trompete"
+                "text": "Trompete"
             },
             "alunos": []
         },
@@ -3420,7 +3420,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I18",
-                "#text": "Tuba"
+                "text": "Tuba"
             },
             "alunos": [
                 "A30176",
@@ -3436,7 +3436,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I18",
-                "#text": "Tuba"
+                "text": "Tuba"
             },
             "alunos": []
         },
@@ -3446,7 +3446,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I19",
-                "#text": "Violoncelo"
+                "text": "Violoncelo"
             },
             "alunos": [
                 "A20021",
@@ -3468,7 +3468,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I19",
-                "#text": "Violoncelo"
+                "text": "Violoncelo"
             },
             "alunos": []
         },
@@ -3478,7 +3478,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I20",
-                "#text": "Violino"
+                "text": "Violino"
             },
             "alunos": [
                 "A36422",
@@ -3498,7 +3498,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I20",
-                "#text": "Violino"
+                "text": "Violino"
             },
             "alunos": []
         },
@@ -3508,7 +3508,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I21",
-                "#text": "Viola de Arco"
+                "text": "Viola de Arco"
             },
             "alunos": [
                 "A33145",
@@ -3532,7 +3532,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I21",
-                "#text": "Viola de Arco"
+                "text": "Viola de Arco"
             },
             "alunos": []
         },
@@ -3542,7 +3542,7 @@
             "duracao": "5",
             "instrumento": {
                 "id": "I22",
-                "#text": "Bandolim"
+                "text": "Bandolim"
             },
             "alunos": [
                 "A38138",
@@ -3567,7 +3567,7 @@
             "duracao": "3",
             "instrumento": {
                 "id": "I22",
-                "#text": "Bandolim"
+                "text": "Bandolim"
             },
             "alunos": []
         }
@@ -3575,7 +3575,7 @@
     "instrumentos": [
         {
             "id": "I1",
-            "#text": "Clarinete",
+            "text": "Clarinete",
             "alunos": [
                 "A33822",
                 "A33142",
@@ -3599,7 +3599,7 @@
         },
         {
             "id": "I2",
-            "#text": "Contrabaixo",
+            "text": "Contrabaixo",
             "alunos": [
                 "A35277",
                 "A35278",
@@ -3623,7 +3623,7 @@
         },
         {
             "id": "I3",
-            "#text": "Corne Inglês",
+            "text": "Corne Inglês",
             "alunos": [
                 "A38143",
                 "A33143",
@@ -3643,7 +3643,7 @@
         },
         {
             "id": "I4",
-            "#text": "Eufónio",
+            "text": "Eufónio",
             "alunos": [
                 "A38169",
                 "A35323",
@@ -3663,7 +3663,7 @@
         },
         {
             "id": "I5",
-            "#text": "Fagote",
+            "text": "Fagote",
             "alunos": [
                 "A38165",
                 "A38176",
@@ -3691,7 +3691,7 @@
         },
         {
             "id": "I6",
-            "#text": "Flauta",
+            "text": "Flauta",
             "alunos": [
                 "A35271",
                 "A38156",
@@ -3712,7 +3712,7 @@
         },
         {
             "id": "I7",
-            "#text": "Fliscorne",
+            "text": "Fliscorne",
             "alunos": [
                 "A33140",
                 "A33141",
@@ -3731,7 +3731,7 @@
         },
         {
             "id": "I8",
-            "#text": "Guitarra",
+            "text": "Guitarra",
             "alunos": [
                 "A1510",
                 "A33057",
@@ -3761,7 +3761,7 @@
         },
         {
             "id": "I9",
-            "#text": "Harpa",
+            "text": "Harpa",
             "alunos": [
                 "A27589",
                 "A38214",
@@ -3792,7 +3792,7 @@
         },
         {
             "id": "I10",
-            "#text": "Oboé",
+            "text": "Oboé",
             "alunos": [
                 "A35272",
                 "A32010",
@@ -3813,7 +3813,7 @@
         },
         {
             "id": "I11",
-            "#text": "Orgão",
+            "text": "Orgão",
             "alunos": [
                 "A18141",
                 "A35302",
@@ -3832,7 +3832,7 @@
         },
         {
             "id": "I12",
-            "#text": "Percussão",
+            "text": "Percussão",
             "alunos": [
                 "A38211",
                 "A38174",
@@ -3851,7 +3851,7 @@
         },
         {
             "id": "I13",
-            "#text": "Piano",
+            "text": "Piano",
             "alunos": [
                 "A38218",
                 "A35283",
@@ -3871,7 +3871,7 @@
         },
         {
             "id": "I14",
-            "#text": "Saxofone",
+            "text": "Saxofone",
             "alunos": [
                 "A38196",
                 "A29871",
@@ -3889,7 +3889,7 @@
         },
         {
             "id": "I15",
-            "#text": "Trombone",
+            "text": "Trombone",
             "alunos": [
                 "A33148",
                 "A35291",
@@ -3909,7 +3909,7 @@
         },
         {
             "id": "I16",
-            "#text": "Trompa",
+            "text": "Trompa",
             "alunos": [
                 "A38215",
                 "A38126",
@@ -3930,7 +3930,7 @@
         },
         {
             "id": "I17",
-            "#text": "Trompete",
+            "text": "Trompete",
             "alunos": [
                 "A38193",
                 "A36487",
@@ -3949,7 +3949,7 @@
         },
         {
             "id": "I18",
-            "#text": "Tuba",
+            "text": "Tuba",
             "alunos": [
                 "A33146",
                 "A30176",
@@ -3965,7 +3965,7 @@
         },
         {
             "id": "I19",
-            "#text": "Violoncelo",
+            "text": "Violoncelo",
             "alunos": [
                 "A32597",
                 "A25073",
@@ -3992,7 +3992,7 @@
         },
         {
             "id": "I20",
-            "#text": "Violino",
+            "text": "Violino",
             "alunos": [
                 "A36422",
                 "A33152",
@@ -4012,7 +4012,7 @@
         },
         {
             "id": "I21",
-            "#text": "Viola de Arco",
+            "text": "Viola de Arco",
             "alunos": [
                 "A36539",
                 "A35274",
@@ -4040,7 +4040,7 @@
         },
         {
             "id": "I22",
-            "#text": "Bandolim",
+            "text": "Bandolim",
             "alunos": [
                 "A38138",
                 "A36971",
