@@ -14,7 +14,14 @@ def normalize_json(path, output_path):
     data = rename_keys(data)
 
     cursos = {curso["id"]: {**curso, "alunos": []} for curso in data["cursos"]}
-    instrumentos = {instr["id"]: {**instr, "alunos": []} for instr in data["instrumentos"]}
+    instrumentos = {instr["id"]: {**instr, "alunos": [], "cursos": []} for instr in data["instrumentos"]}
+
+    cs_counter = 1
+
+    for curso in cursos.values():
+        if curso["id"].startswith("CS"):
+            curso["id"] = f"CS{cs_counter}"
+            cs_counter += 1
 
     for aluno in data["alunos"]:
         aluno_id = aluno["id"]
@@ -26,7 +33,16 @@ def normalize_json(path, output_path):
 
         for instr in instrumentos.values():
             if instr["text"] == instrumento_nome:
+                # Add aluno to instrumento and link to cursos
                 instr["alunos"].append(aluno_id)
+                if curso_id not in instr["cursos"]:
+                    instr["cursos"].append(curso_id)
+
+                # Update aluno with the full instrumento object
+                aluno["instrumento"] = {
+                    "id": instr["id"],
+                    "text": instrumento_nome
+                }
                 break  
 
     data["cursos"] = list(cursos.values())
