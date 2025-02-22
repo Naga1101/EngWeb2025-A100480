@@ -33,12 +33,10 @@ def normalize_json(path, output_path):
 
         for instr in instrumentos.values():
             if instr["text"] == instrumento_nome:
-                # Add aluno to instrumento and link to cursos
                 instr["alunos"].append(aluno_id)
                 if curso_id not in instr["cursos"]:
                     instr["cursos"].append(curso_id)
 
-                # Update aluno with the full instrumento object
                 aluno["instrumento"] = {
                     "id": instr["id"],
                     "text": instrumento_nome
