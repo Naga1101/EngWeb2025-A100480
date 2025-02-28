@@ -1,0 +1,62 @@
+{
+  "alunos": [
+    {
+      "id": "A94015",
+      "nome": "João Daniel da Silva Carvalho",
+      "github": "https://github.com/joodanic/EngWeb2024"
+    },
+    {
+      "id": "A95345",
+      "nome": "Eduardo Miguel Pacheco Silva",
+      "github": "https://github.com/dud4s/EngWeb2024"
+    },
+    {
+      "id": "A96208",
+      "nome": "Rafael João Ferreira Gomes",
+      "github": "https://github.com/RafaGomes1/EngWeb2024"
+    },
+    {
+      "id": "A97455",
+      "nome": "Henrique Nuno Marinho Malheiro",
+      "github": "https://github.com/a97455/EngWeb2024"
+    },
+    {
+      "id": "A100615",
+      "nome": "João Miguel Mendes Moura",
+      "github": "https://github.com/joaomoura12/EngWeb2024"
+    },
+    {
+      "id": "A100660",
+      "nome": "Francisco Macedo Ferreira",
+      "github": "https://github.com/chicoferreira/EngWeb2024"
+    },
+    {
+      "id": "A100701",
+      "nome": "Pedro Duarte Nobre Viana",
+      "github": "https://github.com/dvianaa/EngWeb2024"
+    },
+    {
+      "id": "A100758",
+      "nome": "Hugo Arantes Dias",
+      "github": "https://github.com/hugodiasUM/EngWeb2024"
+    },
+    {
+      "id": "A100759",
+      "nome": " Pedro Afonso Moreira Lopes",
+      "github": "https://github.com/LerdoPopes/EngWeb2024"
+    },
+    {
+      "id": "A100893",
+      "nome": "Luís de Castro Rodrigues Caetano",
+      "github": "https://github.com/056zedelta/EngWeb2024"
+    },
+    {
+      "id": "A100480",
+      "nome": "Nuno Aguiar",
+      "github": "https://github.com/Naga1101/EngWeb2025-A100480",
+      "tpc1": "1",
+      "tpc2": "1",
+      "tpc3": "1"
+    }
+  ]
+}
