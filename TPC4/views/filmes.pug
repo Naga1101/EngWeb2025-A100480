@@ -89,22 +89,11 @@ block content
       tr
         th Ano
         th Título
-        th Elenco
-        th Géneros
         th Opções
       each f in lfilmes
         tr(style="cursor: pointer; position: relative;" onclick=`window.location='/filmes/${f.id}'`)
           td= f.year
           td= f.title
-          td
-            ul.w3-ul
-              each ator in f.cast
-                li
-                  a(href=`/filmes/ator/${ator}`, onclick="event.stopPropagation()")= ator
-          td
-            ul.w3-ul
-              each g in f.genres
-                li= g
           td
             a(href=`/filmes/edit/${f.id}`, class="w3-button w3-aqua w3-round-xxlarge", onclick="event.stopPropagation()") Editar
             a(href=`/filmes/delete/${f.id}`, class="w3-button w3-aqua w3-round-xxlarge", onclick="event.stopPropagation()") Eliminar
