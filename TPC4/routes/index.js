@@ -26,6 +26,20 @@ router.get('/filmes', function(req, res) {
     });
 });
 
+router.get('/filmes/:id', function(req, res) {
+  axios.get(`http://localhost:5000/filmes/${req.params.id}`)
+    .then(resp => {
+      res.render('filme', {
+        filme: resp.data
+      });
+    })
+    .catch(erro => {
+      console.log(erro);
+      res.render('error', { error: erro });
+    });
+});
+
+
 /* GET Filme Edit Page */
 router.get('/filmes/edit/:id', function(req, res) {
   axios.get(`http://localhost:5000/filmes/${req.params.id}`)
@@ -63,11 +77,11 @@ router.post('/filmes/update/:id', async (req, res) => {
 });
 
 /* GET Filme by Actor */
-router.get('/filmes/actor/:nome', function(req, res) {
+router.get('/filmes/ator/:nome', function(req, res) {
   axios.get('http://localhost:5000/filmes')
     .then(resp => {
-      const filmes_autor = resp.data.filter(f => f.cast.includes(req.params.nome));
-      res.render('ator', { filmes: filmes_autor, autor: req.params.nome });
+      const filmes_ator = resp.data.filter(f => f.cast.includes(req.params.nome));
+      res.render('ator', { filmes: filmes_ator, ator: req.params.nome });
     })
     .catch(erro => {
       console.log(erro);
