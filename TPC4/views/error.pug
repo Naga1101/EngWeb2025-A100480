@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  h1 Error
+  p An error occurred: #{error.message}
+  pre= error.stack
