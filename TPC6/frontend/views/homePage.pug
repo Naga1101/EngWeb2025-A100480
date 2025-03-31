@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  header.w3-container.w3-indigo.w3-padding.w3-round-large
+    .w3-row.w3-display-container
+      .w3-col.s6.w3-center
+        h1.w3-text-white.w3-xxlarge
+          i.fas.fa-file-contract(style="margin-right:10px") 
+          | Contratos
+      .w3-col.s6.w3-right-align
+        .w3-text-white.w3-large
+          p
+            i.fas.fa-calendar-alt(style="margin-right:5px")
+            = new Date().toLocaleDateString('pt-PT')
+          p
+            i.fas.fa-list-ol(style="margin-right:5px")
+            | Total de Contratos: #{contratos ? contratos.length : 0}
+
+  .w3-container.w3-margin-top
+    if contratos && contratos.length > 0
+      .w3-responsive
+        table.w3-table.w3-striped.w3-border.w3-hoverable.w3-card.w3-round-large
+          thead.w3-indigo.w3-text-white
+            tr
+              th ID Contrato
+              th Objeto
+              th Data
+              th Preço
+              th NIPC
+              th Entidade
+          tbody
+            each contrato in contratos
+              tr.w3-hover-shadow
+                td
+                  a.w3-text-indigo.w3-hover-text-deep-purple(href=`/${contrato._id}`)= contrato._id
+                td.w3-text-dark-grey= contrato.objectoContrato
+                td.w3-text-dark-grey= contrato.dataCelebracaoContrato
+                td.w3-text-green.w3-large= contrato.precoContratual + ' €'
+                td
+                  a.w3-text-indigo.w3-hover-text-deep-purple(href=`/entidades/${contrato.NIPC_entidade_comunicante}`)= contrato.NIPC_entidade_comunicante
+                td.w3-text-dark-grey= contrato.entidade_comunicante
+    else
+      .w3-panel.w3-pale-yellow.w3-border.w3-border-yellow.w3-round-large.w3-padding
+        h3.w3-text-orange
+          i.fas.fa-exclamation-triangle(style="margin-right:10px")
+          | Aviso!
+        p Nenhum contrato encontrado na base de dados.
+        a.w3-button.w3-orange.w3-round.w3-hover-shadow(href="/") Voltar à página inicial
+
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")

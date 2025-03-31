@@ -1,0 +1,101 @@
+extends layout
+
+block content
+  header.w3-container.w3-indigo.w3-padding.w3-round-large
+    .w3-row.w3-display-container
+      .w3-col.s6.w3-center
+        h1.w3-text-white.w3-xxlarge
+          i.fas.fa-file-contract(style="margin-right:10px") 
+          | Detalhes do Contrato
+      .w3-col.s6.w3-right-align
+        p.w3-text-white.w3-large
+          i.fas.fa-calendar-alt(style="margin-right:5px")
+          = new Date().toLocaleDateString('pt-PT')
+
+  .w3-container.w3-margin-top
+    .w3-card-4.w3-light-grey.w3-round-large.w3-hover-shadow
+      .w3-container.w3-deep-purple.w3-padding
+        h2.w3-text-white
+          i.fas.fa-info-circle(style="margin-right:10px")
+          | Informação Básica
+      .w3-container.w3-padding-large
+        .w3-row-padding
+          .w3-half
+            p
+              strong.w3-text-indigo
+                i.fas.fa-fingerprint(style="margin-right:10px")
+                | ID Contrato: 
+              span= contrato._id
+            p
+              strong.w3-text-indigo
+                i.fas.fa-bullhorn(style="margin-right:10px")
+                | Número Anúncio: 
+              span= contrato.nAnuncio || 'Não disponível'
+            p
+              strong.w3-text-indigo
+                i.fas.fa-tasks(style="margin-right:10px")
+                | Tipo Procedimento: 
+              span= contrato.tipoprocedimento
+          .w3-half
+            p
+              strong.w3-text-indigo
+                i.fas.fa-euro-sign(style="margin-right:10px")
+                | Preço Contratual: 
+              span.w3-text-green.w3-large= contrato.precoContratual + ' €'
+            p
+              strong.w3-text-indigo
+                i.fas.fa-calendar-day(style="margin-right:10px")
+                | Prazo Execução: 
+              span= contrato.prazoExecucao + ' dias'
+
+      .w3-container.w3-deep-purple.w3-padding
+        h2.w3-text-white
+          i.fas.fa-calendar-week(style="margin-right:10px")
+          | Datas Importantes
+      .w3-container.w3-padding-large
+        .w3-row-padding
+          .w3-half
+            p
+              strong.w3-text-indigo
+                i.fas.fa-newspaper(style="margin-right:10px")
+                | Data Publicação: 
+              span= contrato.dataPublicacao
+          .w3-half
+            p
+              strong.w3-text-indigo
+                i.fas.fa-handshake(style="margin-right:10px")
+                | Data Celebração: 
+              span= contrato.dataCelebracaoContrato
+
+      .w3-container.w3-deep-purple.w3-padding
+        h2.w3-text-white
+          i.fas.fa-building(style="margin-right:10px")
+          | Entidade Comunicante
+      .w3-container.w3-padding-large
+        .w3-row-padding
+          .w3-half
+            p
+              strong.w3-text-indigo
+                i.fas.fa-id-card(style="margin-right:10px")
+                | NIPC: 
+              a.w3-text-indigo.w3-hover-text-deep-purple(href=`/entidades/${contrato.NIPC_entidade_comunicante}`)= contrato.NIPC_entidade_comunicante
+          .w3-half
+            p
+              strong.w3-text-indigo
+                i.fas.fa-landmark(style="margin-right:10px")
+                | Nome: 
+              span= contrato.entidade_comunicante
+
+      .w3-container.w3-deep-purple.w3-padding
+        h2.w3-text-white
+          i.fas.fa-gavel(style="margin-right:10px")
+          | Fundamentação Legal
+      .w3-container.w3-padding-large
+        p= contrato.fundamentacao
+
+      .w3-container.w3-center.w3-padding-16
+        a.w3-button.w3-indigo.w3-round-large.w3-hover-shadow(href="/")
+          i.fas.fa-arrow-left(style="margin-right:5px")
+          | Voltar
+
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
